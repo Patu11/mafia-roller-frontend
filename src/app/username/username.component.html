@@ -1,0 +1,8 @@
+<div id="usernameDiv" class="container">
+  <h1 *ngIf="username">Hello {{username}}!</h1>
+  <h1 *ngIf="!username">Hello Stranger!</h1>
+
+  <input [(ngModel)]="username" type="text" class="form-control" id="usernameInput" placeholder="Username">
+  <button (click)="onSubmit()" type="button" class="btn btn-primary btn-lg" id="usernameButton">Submit</button>
+  <p *ngIf="!username" id="usernameError">Username cannot be empty!</p>
+</div>
