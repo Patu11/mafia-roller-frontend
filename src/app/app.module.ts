@@ -7,12 +7,16 @@ import {UsernameComponent} from './username/username.component';
 import {FormsModule} from '@angular/forms';
 import {RoomsComponent} from './rooms/rooms.component';
 import {HttpClientModule} from '@angular/common/http';
+import { RoomComponent } from './room/room.component';
+import { UserslistComponent } from './userslist/userslist.component';
 
 @NgModule({
     declarations: [
         AppComponent,
         UsernameComponent,
-        RoomsComponent
+        RoomsComponent,
+        RoomComponent,
+        UserslistComponent
     ],
     imports: [
         BrowserModule,

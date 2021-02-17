@@ -14,4 +14,8 @@ export class RoomsService {
     getRooms() {
         return this.http.get<Room[]>(this.homePath + '/rooms');
     }
+
+    getRoomByCode(code: string) {
+        return this.http.get<Room>(this.homePath + '/rooms/' + code);
+    }
 }

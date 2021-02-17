@@ -17,6 +17,10 @@ export class RoomsComponent implements OnInit {
         });
     }
 
+    onJoinClick(r: Room) {
+        console.log(r.code);
+    }
+
     ngOnInit(): void {
     }
 

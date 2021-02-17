@@ -1,4 +1,4 @@
-<div>
+<div class="container">
     <table class="table">
         <thead>
         <tr>
@@ -12,7 +12,8 @@
             <td>{{room.code}}</td>
             <td>{{room.name}}</td>
             <td>
-                <button class="btn-primary">Join</button>
+                <a class="btn btn-primary" (click)="onJoinClick(room)">Join</a>
+                <a class="btn btn-success">Copy</a>
             </td>
         </tr>
         </tbody>
