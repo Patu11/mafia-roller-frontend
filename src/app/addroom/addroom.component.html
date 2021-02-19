@@ -1,0 +1,22 @@
+<button type="button" class="btn btn-primary"
+        (click)="openModal(template)">Create room
+</button>
+
+<ng-template #template>
+    <div class="modal-header">
+        <h4 class="modal-title pull-left">Create room</h4>
+        <button type="button" class="close pull-right"
+                aria-label="Close" (click)="modalRef.hide()">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <p *ngIf="roomName">
+            Room name: <span style="font-weight: bold">{{roomName}}</span>
+        </p>
+        <input [(ngModel)]="roomName" type="text" class="form-control" id="roomNameInput" placeholder="Room name">
+        <div>
+            <button (click)="onSubmit()" type="button" class="btn btn-primary" id="roomNameButton">Submit</button>
+        </div>
+    </div>
+</ng-template>

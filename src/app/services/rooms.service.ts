@@ -18,4 +18,11 @@ export class RoomsService {
     getRoomByCode(code: string) {
         return this.http.get<Room>(this.homePath + '/rooms/' + code);
     }
+
+    addRoom(roomName: string) {
+        const body = {
+            name: roomName
+        };
+        return this.http.post(this.homePath + '/rooms', body);
+    }
 }

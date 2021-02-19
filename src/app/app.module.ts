@@ -7,8 +7,10 @@ import {UsernameComponent} from './username/username.component';
 import {FormsModule} from '@angular/forms';
 import {RoomsComponent} from './rooms/rooms.component';
 import {HttpClientModule} from '@angular/common/http';
-import { RoomComponent } from './room/room.component';
-import { UserslistComponent } from './userslist/userslist.component';
+import {RoomComponent} from './room/room.component';
+import {UserslistComponent} from './userslist/userslist.component';
+import {AddroomComponent} from './addroom/addroom.component';
+import {ModalModule} from 'ngx-bootstrap/modal';
 
 @NgModule({
     declarations: [
@@ -16,13 +18,15 @@ import { UserslistComponent } from './userslist/userslist.component';
         UsernameComponent,
         RoomsComponent,
         RoomComponent,
-        UserslistComponent
+        UserslistComponent,
+        AddroomComponent
     ],
     imports: [
         BrowserModule,
         AppRoutingModule,
         FormsModule,
-        HttpClientModule
+        HttpClientModule,
+        ModalModule.forRoot()
     ],
     providers: [],
     bootstrap: [AppComponent]
